@@ -1,0 +1,17 @@
+---
+title: "6/20-Markdown"
+author: "Samruddhi Naik"
+date: '2022-06-21'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(billboard)
+library(tidyverse)
+billboard 
+```
+
