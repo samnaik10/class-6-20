@@ -6,12 +6,33 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ```{r}
 library(billboard)
 library(tidyverse)
-billboard 
+
+as_tibble(wiki_hot_100s)
+
+wiki_hot_100s |>
+  count(artist) |>
+  arrange(desc(n))
+
+```
+
+
+
+```{r}
+x <- wiki_hot_100s|>
+  as_tibble()
+
+
+x |> 
+  count(artist) |>
+  filter(n==1) |> 
+  nrow()
+
+
 ```
 
